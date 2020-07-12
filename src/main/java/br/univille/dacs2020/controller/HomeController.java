@@ -18,7 +18,6 @@ public class HomeController {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/YYYY - HH:mm");
         String data = sdf.format(agora);
 
-        data = String.valueOf(agora.getTime());
         return new ModelAndView("home/index", "dataatualizada", data);
     }
 }

@@ -23,7 +23,6 @@ public class PacienteController {
         List<Paciente> listaPacientes = service.getAll();
 
         return new ModelAndView("paciente/index", "listapacientes", listaPacientes);
-        
     }
     
 }

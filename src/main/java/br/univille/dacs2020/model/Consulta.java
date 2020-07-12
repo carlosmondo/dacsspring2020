@@ -26,11 +26,11 @@ public class Consulta {
     private Date data;
     @Column(nullable = false)
     private String status;
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.LAZY) // Talvez tirar esse Fetch
     private Paciente paciente;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="COMSULTA_ID")
-    private List<ProcedimentoRealizado> listaProcedimentos = new ArrayList<ProcedimentoRealizado>();
+    private List<ProcedimentoRealizado> listaProcedimentos = new ArrayList<ProcedimentoRealizado>(); // ArrayList?
 
     public long getId() {
         return id;

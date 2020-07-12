@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -24,7 +23,6 @@ public class Consulta {
     private long id;
     @Temporal(value = TemporalType.DATE)
     private Date data;
-    @Column(nullable = false)
     private String status;
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.LAZY) // Talvez tirar esse Fetch
     private Paciente paciente;

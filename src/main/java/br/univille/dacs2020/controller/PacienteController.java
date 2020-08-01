@@ -26,7 +26,6 @@ public class PacienteController {
     @GetMapping
     public ModelAndView index(){
         List<Paciente> listaPacientes = service.getAll();
-
         return new ModelAndView("paciente/index", "listapacientes", listaPacientes);
     }
 

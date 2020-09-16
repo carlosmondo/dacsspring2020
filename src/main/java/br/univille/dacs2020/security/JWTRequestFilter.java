@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
  
-import br.univille.dacs2020.service.impl.MyUserDetailsService;
+import br.univille.dacs2020.services.impl.MyUserDetailsService;
  
 @Component
 public class JWTRequestFilter extends OncePerRequestFilter {

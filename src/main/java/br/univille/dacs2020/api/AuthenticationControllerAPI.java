@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.dacs2020.model.Usuario;
 import br.univille.dacs2020.security.JWTUtil;
-import br.univille.dacs2020.service.impl.MyUserDetailsService;
+import br.univille.dacs2020.services.impl.MyUserDetailsService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponses;
  

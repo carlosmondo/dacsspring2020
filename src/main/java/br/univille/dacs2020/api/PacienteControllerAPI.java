@@ -23,10 +23,11 @@ public class PacienteControllerAPI {
     @Autowired
     private PacienteService service;
 
+    
     @GetMapping
     public ResponseEntity<List<Paciente>> getAll(){
         List<Paciente> lista = service.getAll();
-        return new ResponseEntity<List<Paciente>>(lista, HttpStatus.OK);
+        return new ResponseEntity<List<Paciente>>(lista,HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -41,29 +42,28 @@ public class PacienteControllerAPI {
     @PostMapping
     public ResponseEntity<Paciente> save(@RequestBody Paciente paciente){
         service.save(paciente);
-        return new ResponseEntity<Paciente>(paciente, HttpStatus.OK);
+        return new ResponseEntity<Paciente>(paciente,HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Paciente> update(@PathVariable("id") Paciente pacienteAntigo, @RequestBody Paciente pacienteAtualizado){
+    public ResponseEntity<Paciente> update(@PathVariable("id") Paciente pacienteAntigo, 
+                                            @RequestBody Paciente pacienteAtualizado){
         if(pacienteAntigo == null){
             return ResponseEntity.notFound().build();
-        }
-
+        }                                                                 
         pacienteAntigo.setNome(pacienteAtualizado.getNome());
         pacienteAntigo.setSexo(pacienteAtualizado.getSexo());
         pacienteAntigo.setDataNascimento(pacienteAtualizado.getDataNascimento());
 
         service.save(pacienteAntigo);
-        return new ResponseEntity<Paciente>(pacienteAntigo, HttpStatus.OK);
+        return new ResponseEntity<Paciente>(pacienteAntigo,HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") Paciente paciente){
         if(paciente == null){
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.notFound().build();    
         }
-
         service.delete(paciente);
         return ResponseEntity.ok().build();
     }

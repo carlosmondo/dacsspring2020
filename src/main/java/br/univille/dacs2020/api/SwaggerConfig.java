@@ -72,5 +72,4 @@ public class SwaggerConfig {
                     .useBasicAuthenticationWithAccessCodeGrant(false)
                     .build();
     }
-
-} 
+}

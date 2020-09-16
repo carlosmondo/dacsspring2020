@@ -17,11 +17,11 @@ public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(length = 1000, nullable = false)
+    @Column(length = 1000,nullable = false)
     private String nome;
     private String sexo;
-    @Temporal(value = TemporalType.DATE)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(value=TemporalType.DATE)
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date dataNascimento;
 
     public long getId() {
@@ -55,6 +55,4 @@ public class Paciente {
     public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
-
-    
 }

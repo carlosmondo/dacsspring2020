@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+
 @Entity
 public class ProcedimentoRealizado {
     @Id
@@ -16,7 +17,7 @@ public class ProcedimentoRealizado {
     private float valor;
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private Procedimento procedimento;
-    
+
     public long getId() {
         return id;
     }
@@ -39,5 +40,13 @@ public class ProcedimentoRealizado {
 
     public void setValor(float valor) {
         this.valor = valor;
+    }
+
+    public Procedimento getProcedimento() {
+        return procedimento;
+    }
+
+    public void setProcedimento(Procedimento procedimento) {
+        this.procedimento = procedimento;
     }
 }

@@ -1,5 +1,5 @@
 package br.univille.dacs2020.security;
- 
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
- 
+
 @Service
 public class JWTUtil {
-    private String SECRET_KEY= "SECRET";
+    private String SECRET_KEY= "SECRET"; // "q4MvGeJnXGt7v4LdhyY3uNBW";
     public String extractUserName(String token){
         return extractClaim(token, Claims::getSubject);
     }

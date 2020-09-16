@@ -16,6 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+
 @Entity
 public class Consulta {
     @Id
@@ -24,11 +25,12 @@ public class Consulta {
     @Temporal(value = TemporalType.DATE)
     private Date data;
     private String status;
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.LAZY) // Talvez tirar esse Fetch
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private Paciente paciente;
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="COMSULTA_ID")
-    private List<ProcedimentoRealizado> listaProcedimentos = new ArrayList<ProcedimentoRealizado>(); // ArrayList?
+    @JoinColumn(name = "CONSULTA_ID")
+    private List<ProcedimentoRealizado> listaProcedimentos = new ArrayList();
+
 
     public long getId() {
         return id;
@@ -52,7 +54,6 @@ public class Consulta {
 
     public void setStatus(String status) {
         this.status = status;
-    
     }
 
     public Paciente getPaciente() {

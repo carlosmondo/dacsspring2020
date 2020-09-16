@@ -16,14 +16,12 @@ public class StartApplication implements ApplicationRunner{
     @Override
     public void run(ApplicationArguments args) throws Exception {
         Usuario usuarioAdmin = service.buscaUsuario("admin");
-        //System.out.println("Buscando");
         if(usuarioAdmin == null){
-            //System.out.println("Nao achou");
             usuarioAdmin = new Usuario();
             usuarioAdmin.setUsuario("admin");
             usuarioAdmin.setSenha("admin");
             service.save(usuarioAdmin);
-            //System.out.println("Senha salva " + usuarioAdmin.getSenha());
+            //System.out.println("Senha salva: " + usuarioAdmin.getSenha());
         }
     }
 }

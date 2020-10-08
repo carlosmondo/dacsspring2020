@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.univille.dacs2020.model.Paciente;
-import br.univille.dacs2020.services.PacienteService;
+import br.univille.dacs2020.service.PacienteService;
 
 @Controller
 @RequestMapping("/paciente")

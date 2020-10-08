@@ -4,9 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-
 import br.univille.dacs2020.model.Usuario;
-import br.univille.dacs2020.services.impl.MyUserDetailsService;
+import br.univille.dacs2020.service.impl.MyUserDetailsService;
 
 @Component
 public class StartApplication implements ApplicationRunner{

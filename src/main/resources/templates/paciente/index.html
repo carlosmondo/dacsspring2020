@@ -12,8 +12,8 @@
                 class="btn btn-primary" role="button">Novo</a>
 
             <form class="form-inline my-2 my-sm-0" th:action="@{/paciente}">
-                    <input type="search" class="form-control mr-sm-2" name="busca" placeholder="Buscar" aria-label="Search">
-                    <button type="submit" class="btn btn-success my-2 my-sm-0">Buscar</button>
+                    <input class="form-control mr-sm-2" type="search" name="busca" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
 
             <table class="table" id="pacientes">
@@ -44,7 +44,7 @@
         <div th:include="layout :: footer" id="footer">(footer)</div>
         <script type="text/javascript">
             $(document).ready(function(){
-                $("#pacientes").on("click", ".js-delete", function(){
+                $("#pacientes").on("click",".js-delete", function(){
                     var button = $(this);
                     bootbox.confirm("Confirma exclusão do paciente?", function(result){
                         if(result){

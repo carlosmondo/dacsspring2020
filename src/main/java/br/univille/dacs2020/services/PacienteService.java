@@ -1,4 +1,4 @@
-package br.univille.dacs2020.service;
+package br.univille.dacs2020.services;
 
 import java.util.List;
 

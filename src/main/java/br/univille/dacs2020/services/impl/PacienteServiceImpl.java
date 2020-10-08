@@ -1,4 +1,4 @@
-package br.univille.dacs2020.service.impl;
+package br.univille.dacs2020.services.impl;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import br.univille.dacs2020.model.Paciente;
 import br.univille.dacs2020.repository.PacienteRepository;
-import br.univille.dacs2020.service.PacienteService;
+import br.univille.dacs2020.services.PacienteService;
 
 @Service
 public class PacienteServiceImpl implements PacienteService {

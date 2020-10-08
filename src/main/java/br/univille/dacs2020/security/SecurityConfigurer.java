@@ -13,7 +13,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import br.univille.dacs2020.service.impl.MyUserDetailsService;
+import br.univille.dacs2020.services.impl.MyUserDetailsService;
  
 @EnableWebSecurity
 public class SecurityConfigurer extends WebSecurityConfigurerAdapter {

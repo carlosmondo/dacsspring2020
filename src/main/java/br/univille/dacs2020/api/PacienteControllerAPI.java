@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.dacs2020.model.Paciente;
-import br.univille.dacs2020.service.PacienteService;
+import br.univille.dacs2020.services.PacienteService;
 
 @RestController
 @RequestMapping("/api/v1/paciente")
